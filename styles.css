@@ -100,7 +100,6 @@ nav a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.5);
 }
   
 .hero-content {
@@ -161,4 +160,57 @@ nav a {
   width:70px;
   margin:auto;
   margin-bottom:15px;
+}
+
+/* ------ Why Visit Section - End ------- */
+
+
+/* ------  CTA Section - Start ------- */
+/* ------ general styles that affects why CTA section only // alignment, size, content ------- */
+
+
+.cta {
+  margin-top: 60px;
+}
+  
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+  
+.cta-box {
+  color:#fff ;
+  padding: 80px 40px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-grid {
+  background: url(midterm-assets/images/coffee-shop.jpeg) center/cover no-repeat;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+  
+.cta-grid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+  
+.btn-outline {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
 }
