@@ -75,3 +75,45 @@ nav a {
   font-family:'Lato';
   font-weight:700;
 }
+
+/* ------ Header & Nav Layout - End ------- */
+
+
+/* ------ Header & Nav Layout - Start ------- */
+/* ------ general styles that affects hero section only // alignment, size, content ------- */
+
+.hero {
+  background:url(hero.jpg) center/cover no-repeat;
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  position:relative;
+}
+  
+.hero::after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.5);
+}
+  
+.hero-content {
+  position:relative;
+  max-width:600px;
+}
+  
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  background:#fff;
+  padding:12px 25px;
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+}
