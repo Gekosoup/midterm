@@ -258,3 +258,48 @@ nav a {
   color:#d69e3d;
   font-size: .9rem;
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background:#000;
+  color:#fff;
+  font-size: .9rem;
+}
+
+/* ------  Media Queries ------- */
+
+/* ------ Tablet Size - Start ------- */
+
+@media (min-width:768px) {
+
+  h1{font-size:2.986rem;}
+  h2{font-size:2.488rem;}
+  h3{font-size:1.728rem;}
+  
+.grid-gallery {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+    
+  .grid-gallery .large {
+    grid-row: 1/3;
+  }
+    
+  .features {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+    
+  .cta-grid {
+    grid-template-columns:1fr 1fr;
+  }
+    
+  .about {
+    flex-direction:row;
+    align-items:center;
+  }
+    
+  .testimonial-grid {
+    grid-template-columns:repeat(3,1fr);
+  }
+}
