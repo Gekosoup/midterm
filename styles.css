@@ -304,3 +304,18 @@ footer {
     grid-template-columns:repeat(3,1fr);
   }
 }
+
+@media (min-width:1200px) {
+
+  h1{font-size:3.815rem;}
+  h2{font-size:3.052rem;}
+  h3{font-size:1.953rem;}
+  
+.hero {
+  height: 80vh;
+}
+  
+.container {
+  width: 85%;
+  }
+}
