@@ -360,15 +360,28 @@ footer {
     position:relative;
   }
     
-    .cta-box::before {
+  .cta-box::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.5);
     }
     
-    .cta-box * {
+  .cta-box * {
     position: relative;
     z-index: 2;
-    }
+  }
+
+  .cta-box {
+    padding:1 20px 60px;
+    text-align: left;
+    display:f lex;
+    flex-direction: column;
+    justify-content: center;
+  }
+    
+  .cta-box h3{
+    max-width:400px;
+    line-height:1.2;
+  }    
 }
