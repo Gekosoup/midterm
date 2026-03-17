@@ -29,21 +29,21 @@
   font-family:'Lato', sans-serif;
   }
   
-  h1{font-size: 2.027rem;}
-  h2{font-size: 1.802rem;}
-  h3{font-size: 1.424rem;}
+  h1 {font-size: 2.027rem;}
+  h2 {font-size: 1.802rem;}
+  h3 {font-size: 1.424rem;}
   
-  p{font-size: 1rem;}
+  p {font-size: 1rem;}
   
-  .section-tag{
+.section-tag {
   color: #d69e3d;
   font-weight: 600;
   margin-bottom: 10px;
-  }
+}
   
-  .center{
+.center {
   text-align: center;
-  }
+}
 
 /* ------ Base Layout - End ------- */
 
@@ -166,7 +166,7 @@ nav a {
 
 
 /* ------  CTA Section - Start ------- */
-/* ------ general styles that affects why CTA section only // alignment, size, content ------- */
+/* ------ general styles that affects CTA section only // alignment, size, content ------- */
 
 
 .cta {
@@ -210,6 +210,32 @@ nav a {
   border: 2px solid #fff;
   padding: 10px 20px;
   color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ------ CTA Section - End ------- */
+
+
+/* ------  About Section - Start ------- */
+/* ------ general styles that affects about section only // alignment, size, content ------- */
+
+.about {
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+  
+.about-text {
+  max-width:500px;
+}
+  
+.btn-dark {
+  background:#000;
+  color:#fff;
+  padding:1 0px 20px;
   text-decoration: none;
   display: inline-block;
   margin-top: 20px;
