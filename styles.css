@@ -345,14 +345,30 @@ footer {
   }
 
   .features {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:60px;
-    margin-top:60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 60px;
+    margin-top: 60px;
   }
     
-    .feature {
-    max-width:320px;
-    margin:auto;
+  .feature {
+    max-width: 320px;
+    margin: auto;
   }
+
+  .cta-box {
+    position:relative;
+  }
+    
+    .cta-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    }
+    
+    .cta-box * {
+    position: relative;
+    z-index: 2;
+    }
 }
