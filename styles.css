@@ -1,31 +1,31 @@
-/* ------ Base Layout - Start ------- */
+/* ------ Base Layout - Start - Mobile Size - Start ------- */
 /* ------ general styles for whole webpage ------- */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
   
-  body{
+body {
   font-family: 'Karla', sans-serif;
   background: #f3f0e9;
   color: #000;
   line-height: 1.6;
-  }
+}
   
-  img{
+img {
   width: 100%;
   display: block;
-  }
+}
   
-  .container{
+  .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
   }
   
-  h1,h2,h3,nav{
+  h1,h2,h3,nav {
   font-family:'Lato', sans-serif;
   }
   
@@ -56,7 +56,7 @@ header {
   color: #fff;
   padding: 15px 0;
 }
-  
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -169,41 +169,49 @@ nav a {
 /* ------ general styles that affects CTA section only // alignment, size, content ------- */
 
 
-.cta {
-  margin-top: 60px;
-}
-  
-.cta-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-  
-.cta-box {
-  color:#fff ;
-  padding: 80px 40px;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-}
 
 .cta-grid {
-  background: url(midterm-assets/images/coffee-shop.jpeg) center/cover no-repeat;
-  height: 70vh;
-  align-items: center;
+  display: flex;
+  flex-direction: row; /* or just remove this line (row is default) */
   justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
+  align-items: center;
+  gap: 40px; /* spacing between boxes */
 }
   
-.cta-grid::after {
+.cta-box h3 {
+  max-width: 400px;
+  line-height: 1.2;
+  color:#fff;
+}
+
+.cta {
+  background: none;
+}
+
+.cta-box.menu {
+  background: url(midterm-assets/images/coffee-shop.jpeg) center/cover no-repeat;
+}
+
+.cta-box.location {
+  background: url(midterm-assets/images/coffee-shop.jpeg) center/cover no-repeat;
+}
+
+.cta-box {
+  position: relative;
+  padding: 120px 60px;
+}
+
+.cta-box::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0,0,0,0.5);
+}
+
+.cta-box * {
+  position: relative;
+  z-index: 2;
+  flex: 1; /* makes both boxes equal width */
 }
   
 .btn-outline {
@@ -211,7 +219,6 @@ nav a {
   padding: 10px 20px;
   color: #fff;
   text-decoration: none;
-  display: inline-block;
   margin-top: 20px;
 }
 
@@ -224,7 +231,6 @@ nav a {
 .about {
   padding: 70px 0;
   display: flex;
-  flex-direction: column;
   gap: 30px;
   text-align: left;
 }
@@ -233,7 +239,7 @@ nav a {
   max-width:500px;
 }
   
-.btn-dark {
+.btn-outline {
   background:#000;
   color:#fff;
   padding: 10px 20px;
@@ -242,8 +248,11 @@ nav a {
   margin-top: 20px;
 }
 
+/* ------ About Section - End ------- */
 
 
+/* ------  Testimonials Section - Start ------- */
+/* ------ general styles that affects testimonials section only // alignment, size, content ------- */
 
 .testimonials {
   background:#000;
@@ -280,11 +289,43 @@ footer {
   h1{font-size:2.986rem;}
   h2{font-size:2.488rem;}
   h3{font-size:1.728rem;}
-  
-.grid-gallery {
-    grid-template-columns: 2fr 1fr 1fr;
+
+  header {
+    background: #000;
+    color: #fff;
+    padding: 15px 0;
   }
     
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    
+  nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+    
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-weight: 700;
+  }
+  
+  .grid-gallery { /* ---- Controls general grid layout for grid parent ---- */
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 15px;
+  }
+
+  .intro {
+    padding:60px 0;
+  }
+
   .grid-gallery .large {
     grid-row: 1/3;
   }
@@ -320,6 +361,7 @@ footer {
 }
 
 /* ------ Tablet Size - End ------- */
+
 /* ------ Desktop Size - Start ------- */
 
 @media (min-width:1200px) {
@@ -327,6 +369,31 @@ footer {
   h1{font-size:3.815rem;}
   h2{font-size:3.052rem;}
   h3{font-size:1.953rem;}
+
+  header {
+    background: #000;
+    color: #fff;
+    padding: 15px 0;
+  }
+    
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    
+  nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+    
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-weight: 700;
+  }
   
   .hero {
     height: 80vh;
@@ -380,18 +447,17 @@ footer {
     
   .cta-box * {
     position: relative;
-    z-index: 2;
   }
 
   .cta-box {
-    padding:1 20px 60px;
-    text-align: left;
-    display:f lex;
+    padding: 20px 60px;
+    text-align: center;
+    display:flex;
     flex-direction: column;
     justify-content: center;
   }
     
-  .cta-box h3{
+  .cta-box h3 {
     max-width:400px;
     line-height:1.2;
   }  
